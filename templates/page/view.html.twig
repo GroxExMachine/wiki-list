@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div style="text-align: right;">
+        <a href="{{ path('page_index') }}" class="btn btn-link">
+            Back to list
+        </a>
+    </div>
+    <h1>{{ page.title }}</h1>
+    <article>
+        {{ page.content|raw }}
+    </article>
+    <div style="text-align: right;">
+        <a href="{{ path('page_index') }}" class="btn btn-link">
+            Back to list
+        </a>
+    </div>
+{% endblock %}

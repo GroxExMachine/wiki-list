@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div style="text-align: right">
+        <a href="{{ path('page_create') }}">Create page</a>
+    </div>
+<ul>
+{% for page in pages %}
+    <li style="display: flex; justify-content: space-between">
+        <div>
+            <a href="{{ path('page_view', {id: page.id}) }}">{{ page.title }}</a>
+        </div>
+        <div>
+            <a href="{{ path('page_edit', {id: page.id}) }}">
+                Edit
+            </a>
+            &nbsp;
+            <a href="{{ path('page_delete', {id: page.id}) }}" class="btn btn-sm btn-primary">
+                Delete
+            </a>
+        </div>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

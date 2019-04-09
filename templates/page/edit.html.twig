@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Edit page</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.title, {'label': 'Title'}) }}
+        {{ form_row(form.content, {'label': 'Content'}) }}
+
+        <button type="submit">
+            Save page
+        </button>
+        <a href="{{ path('page_index') }}">
+            Back to list
+        </a>
+    {{ form_end(form) }}
+{% endblock %}
